@@ -1,0 +1,30 @@
+
+
+.experiencia{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.experiencia li {
+    margin-bottom: 1rem;
+}
+
+.experiencia li .periodo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.experiencia li .periodo::before{
+    content: '';
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../icones/trabalho.svg');
+    margin-right: 0.5rem;
+}

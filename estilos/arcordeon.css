@@ -1,0 +1,68 @@
+.acordeon{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid #fff;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    transition: .25s;
+}
+
+.acordeon.open, .acordeon:hover{
+    background-color: rgb(0, 0, 156);
+    border-color: rgb(0, 0, 156);
+}
+
+.acordeon .trigger{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    text-align: start;
+}
+
+.acordeon .trigger::after{
+    content: '';
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../icones/seta-cima.svg');
+    transition: .5s;
+}
+
+.acordeon.open .trigger::after{
+    transform: rotate(180deg);
+}
+
+.acordeon .trigger:hover{
+    cursor: pointer;
+}
+
+.acordeon .titulo::after {
+    content: "";
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+}
+
+.acordeon .content{
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: max-height 1s, opacity .5s ease-in-out;
+}
+
+.acordeon.open .content{
+    display: inline-block;
+    height: auto;
+    opacity: 1;
+    padding: 0 1rem 1rem 2rem;
+    
+}

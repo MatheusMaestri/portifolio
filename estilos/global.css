@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#nome{
+    color: blue;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+body{
+    background: radial-gradient(circle, black 0%, black 50%, blue 100%); 
+    color: white;
+    
+}
+
+.main {
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid #fff;
+    border-radius: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .main{
+        max-width: 1024px;
+        margin: 1rem auto;
+    }
+
+    .main::after, .main::before{
+        width: 70vw;
+    }
+}
+
